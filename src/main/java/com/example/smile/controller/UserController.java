@@ -1,24 +1,25 @@
 package com.example.smile.controller;
 
 import com.example.smile.service.UserService;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import com.example.smile.util.WebSecurityConfig;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("user")
+@RequestMapping("/")
 public class UserController {
 
     @Resource
     UserService userService;
-
-    @RequestMapping("/login")
-    public String login(HttpServletRequest request){
+//@SessionAttribute(WebSecurityConfig.SESSION_KEY) String account,
+    @RequestMapping(value = "home",method = RequestMethod.POST)
+    public ModelAndView login( HttpServletRequest request){
 
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
@@ -28,7 +29,7 @@ public class UserController {
         String result = userService.login(userName, password);
         System.out.println(result);
         if (result.contains("Login Success")){
-            return "home";
+            return new ModelAndView("home");
         }else {
             return null;
         }

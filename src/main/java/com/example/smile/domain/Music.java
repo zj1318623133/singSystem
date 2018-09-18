@@ -1,11 +1,16 @@
 package com.example.smile.domain;
 
+import java.sql.Date;
+
 public class Music {
 
     private String musicName ;
     private String singer;
     private String album;
-    private int songCount;
+    private int worshipsCount;
+    private int singsCount;
+    private String songScore;
+    private Date createDate;
 
     public String getMusicName() {
         return musicName;
@@ -31,12 +36,36 @@ public class Music {
         this.album = album;
     }
 
-    public int getSongCount() {
-        return songCount;
+    public int getWorshipsCount() {
+        return worshipsCount;
     }
 
-    public void setSongCount(int songCount) {
-        this.songCount = songCount;
+    public void setWorshipsCount(int worshipsCount) {
+        this.worshipsCount = worshipsCount;
+    }
+
+    public int getSingsCount() {
+        return singsCount;
+    }
+
+    public void setSingsCount(int singsCount) {
+        this.singsCount = singsCount;
+    }
+
+    public String getSongScore() {
+        return songScore;
+    }
+
+    public void setSongScore(String songScore) {
+        this.songScore = songScore;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
     @Override
@@ -45,7 +74,10 @@ public class Music {
                 "musicName='" + musicName + '\'' +
                 ", singer='" + singer + '\'' +
                 ", album='" + album + '\'' +
-                ", songCount=" + songCount +
+                ", worshipsCount=" + worshipsCount +
+                ", singsCount=" + singsCount +
+                ", songScore='" + songScore + '\'' +
+                ", createDate=" + createDate +
                 '}';
     }
 }

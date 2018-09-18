@@ -5,14 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Insertion HTML5 Template</title>
+  <title>Home</title>
 
   <!-- load CSS -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">        <!-- Google web font "Open Sans" -->
-  <link rel="stylesheet" href="../css/bootstrap.min.css">                                            <!-- https://getbootstrap.com/ -->
-  <link rel="stylesheet" href="../css/fontawesome-all.min.css">                                      <!-- Font awesome -->
-  <link rel="stylesheet" href="../css/tooplate-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">        <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">                                            <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">                                      <!-- Font awesome -->
+    <link rel="stylesheet" href="../css/tooplate-style.css">
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
 
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.fullcalendar.js?v=0.7"></script>
   <script>
     var renderPage = true;
 
@@ -22,6 +26,16 @@
       alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
       renderPage = false;
     }
+  </script>
+
+  <script type="text/javascript">
+      var mydiv=document.getElementById("calendar");
+      var mydiv_resize=function(){
+          mydiv.style.width=document.body.clientWidth;
+          mydiv.style.height=document.body.clientHeight;
+      }
+      mydiv_resize();
+      window.onresize=mydiv_resize;
   </script>
 
 </head>
@@ -44,13 +58,13 @@
             <nav class="navbar navbar-expand-sm">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a href="../index.html" class="nav-link tm-nav-link tm-text-white active">Home</a>
+                  <a href="../views/home.html" class="nav-link tm-nav-link tm-text-white active">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a href="about.html" class="nav-link tm-nav-link tm-text-white">About</a>
+                  <a href="../views/about.html" class="nav-link tm-nav-link tm-text-white">About</a>
                 </li>
                 <li class="nav-item">
-                  <a href="contact.html" class="nav-link tm-nav-link tm-text-white">Contact</a>
+                  <a href="../views/contact.html" class="nav-link tm-nav-link tm-text-white">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -120,7 +134,6 @@
           </figure>
         </div>
       </div>
-<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
       <div class="row">
         <div class="col-lg-12">
           <div class="tm-tag-line">
@@ -128,82 +141,97 @@
           </div>
         </div>
       </div>
-
-      <div class="row mb-5">
-        <div class="col-xl-12">
-          <div class="media-boxes">
-            <div class="media">
-              <img src="../img/insertion-140x140-01.jpg" alt="Image" class="mr-3">
-              <div class="media-body tm-bg-gray">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-blue">Vivamus eget urna vitae ante</h5>
-                  <p class="mb-0">Insertion HTML Template includes 3 different pages. You can use this layout for your website. Please tell your friends about <a href="https://plus.google.com/+tooplate" target="_parent">Tooplate</a>. Thank you.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-blue tm-price-tag">$5.50</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="media">
-              <img src="../img/insertion-140x140-02.jpg" alt="Image" class="mr-3">
-              <div class="media-body tm-bg-pink-light">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-pink">Proin fermentum sapien sed nisl</h5>
-                  <p class="mb-0">Donec est felis, posuere viverra dapibus ac, pretium vel libero. Aliquam consectetur, arcu eget euismod congue, tortor metus vehicula.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-pink tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-pink tm-price-tag">$7.25</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="media">
-              <img src="../img/insertion-140x140-03.jpg" alt="Image" class="mr-3">
-              <div class="media-body tm-bg-gray">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-blue">Quisque dignissim porta nunc</h5>
-                  <p class="mb-0">In neque felis, fringilla vel orci ut, sodales consectetur purus. Vivamus eget urna vitae ante pellentesque iaculis. Praesent sit amet.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-blue tm-price-tag">$6.80</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="media">
-              <img src="../img/insertion-140x140-04.jpg" alt="Image" class="mr-3">
-              <div class="media-body tm-bg-pink-light">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-pink">Vestibulum mattis quam sodales</h5>
-                  <p class="mb-0">Curabitur id tempor orci. Fusce efficitur in enim sit amet sodales. Proin id gravida leo. Phasellus non quam et justo faucibus rhoncus.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-pink tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-pink tm-price-tag">$3.75</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="media">
-              <img src="../img/insertion-140x140-05.jpg" alt="Image" class="mr-3">
-              <div class="media-body tm-bg-gray">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-blue">Vestibulum mattis quam sodales</h5>
-                  <p class="mb-0">Maecenas sit amet nibh faucibus, tincidunt nisl sit amet, elementum eros. Fusce congue ligula gravida lorem lacinia.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-blue tm-price-tag">$5.25</span>
-                </div>
-              </div>
-            </div>
-          </div> <!-- media-boxes -->
+      <div >
+        <div id="calendar" class="tm-buy-box" region="center" style="width:100%;height: 900px;overflow:auto;"> <!--style="width: 1180px;height: 900px;margin-left: 10px;"-->
+          <div class="easyui-fullCalendar" fit="true"></div>
         </div>
       </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <!--<div class="row mb-5">-->
+        <!--<div class="col-xl-12">-->
+          <!--<div class="media-boxes">-->
+            <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+              <!--&lt;!&ndash;<img src="../img/insertion-140x140-01.jpg" alt="Image" class="mr-3">&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="media-body tm-bg-gray">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-description-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<h5 class="tm-text-blue">Vivamus eget urna vitae ante</h5>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<p class="mb-0">Insertion HTML Template includes 3 different pages. You can use this layout for your website. Please tell your friends about <a href="https://plus.google.com/+tooplate" target="_parent">Tooplate</a>. Thank you.</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-buy-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class="tm-text-blue tm-price-tag">$5.50</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+              <!--&lt;!&ndash;<img src="../img/insertion-140x140-02.jpg" alt="Image" class="mr-3">&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="media-body tm-bg-pink-light">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-description-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<h5 class="tm-text-pink">Proin fermentum sapien sed nisl</h5>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<p class="mb-0">Donec est felis, posuere viverra dapibus ac, pretium vel libero. Aliquam consectetur, arcu eget euismod congue, tortor metus vehicula.</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-buy-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<a href="#" class="tm-bg-pink tm-text-white tm-buy">buy</a>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class="tm-text-pink tm-price-tag">$7.25</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+              <!--&lt;!&ndash;<img src="../img/insertion-140x140-03.jpg" alt="Image" class="mr-3">&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="media-body tm-bg-gray">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-description-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<h5 class="tm-text-blue">Quisque dignissim porta nunc</h5>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<p class="mb-0">In neque felis, fringilla vel orci ut, sodales consectetur purus. Vivamus eget urna vitae ante pellentesque iaculis. Praesent sit amet.</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-buy-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class="tm-text-blue tm-price-tag">$6.80</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+              <!--&lt;!&ndash;<img src="../img/insertion-140x140-04.jpg" alt="Image" class="mr-3">&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="media-body tm-bg-pink-light">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-description-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<h5 class="tm-text-pink">Vestibulum mattis quam sodales</h5>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<p class="mb-0">Curabitur id tempor orci. Fusce efficitur in enim sit amet sodales. Proin id gravida leo. Phasellus non quam et justo faucibus rhoncus.</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-buy-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<a href="#" class="tm-bg-pink tm-text-white tm-buy">buy</a>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class="tm-text-pink tm-price-tag">$3.75</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+            <!--<div class="media">-->
+              <!--<img src="../img/insertion-140x140-05.jpg" alt="Image" class="mr-3">-->
+              <!--<div class="media-body tm-bg-gray">-->
+                <!--&lt;!&ndash;<div class="tm-description-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<h5 class="tm-text-blue">Vestibulum mattis quam sodales</h5>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<p class="mb-0">Maecenas sit amet nibh faucibus, tincidunt nisl sit amet, elementum eros. Fusce congue ligula gravida lorem lacinia.</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="tm-buy-box">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class="tm-text-blue tm-price-tag">$5.25</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+              <!--</div>-->
+            <!--</div>-->
+
+          <!--</div> &lt;!&ndash; media-boxes &ndash;&gt;-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+
+
 
       <div class="row tm-mb-big tm-subscribe-row">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 tm-bg-gray tm-subscribe-form">
@@ -250,6 +278,9 @@
     </div> <!-- .container -->
 
   </div> <!-- .main -->
+
+
+
 
   <!-- load JS -->
   <script src="../js/jquery-3.2.1.slim.min.js"></script> <!-- https://jquery.com/ -->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.smile.dao.SingMapper">
+
+    <select id="selectSingByName" resultType="Music">
+        SELECT music_name AS 'musicName' ,singer , album ,worships_count AS 'worshipsCount',sings_count AS 'singsCount',song_score AS 'songScore',create_date AS 'createDate' FROM music WHERE music_name = #{singName}
+    </select>
+
+    <select id="selectSingAll" resultType="List">
+        SELECT music_name AS 'musicName' ,singer , album ,worships_count AS 'worshipsCount',sings_count AS 'singsCount',song_score AS 'songScore',create_date AS 'createDate' FROM music ORDER BY create_date DESC
+    </select>
+
+    <select id="selectSingByDate" resultType="List">
+        SELECT music_name AS 'musicName' ,singer , album ,worships_count AS 'worshipsCount',sings_count AS 'singsCount',song_score AS 'songScore',create_date AS 'createDate'
+        FROM music
+        WHERE create_date >= #{startDate}
+        ORDER BY create_date DESC
+
+    </select>
+
+    <update id="updateSingByName" >
+        UPDATE music SET
+
+    </update>
+
+    <delete id="deleteSingByName" parameterType="String">
+        DELETE FROM music WHERE music_name = #{singName}
+    </delete>
+
+</mapper>
