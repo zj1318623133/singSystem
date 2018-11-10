@@ -2,6 +2,8 @@ package com.example.smile.controller;
 
 import com.example.smile.domain.Music;
 import com.example.smile.service.SingService;
+import com.example.smile.util.DataUtil;
+import com.example.smile.util.HttpUtils;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -110,7 +112,14 @@ public class SingController {
         String endDate = request.getParameter("endDate");
         List<Music> musics = singService.selectSingByDate(startDate, endDate);
         modelAndView.addObject("selectByDateResult",musics);
+        return modelAndView;
+    }
 
+    @RequestMapping(value = "searchSing",method = RequestMethod.POST)
+    public ModelAndView searchSingByName(HttpServletRequest request, HttpServletResponse response){
+        ModelAndView modelAndView = new ModelAndView("home");
+        String name = request.getParameter("keyword");
+        String s = DataUtil.selectSing(name);
         return modelAndView;
     }
 }

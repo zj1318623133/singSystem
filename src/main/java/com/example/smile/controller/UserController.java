@@ -17,8 +17,7 @@ public class UserController {
 
     @Resource
     UserService userService;
-//@SessionAttribute(WebSecurityConfig.SESSION_KEY) String account,
-    @RequestMapping(value = "home",method = RequestMethod.POST)
+    @RequestMapping(value = "home" ,method = RequestMethod.POST)
     public ModelAndView login( HttpServletRequest request){
 
         String userName = request.getParameter("userName");

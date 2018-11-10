@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class WelcomeController {
 
     public ModelAndView index(){
+        System.out.println("进来了么");
         return new ModelAndView("index");
     }
 }
