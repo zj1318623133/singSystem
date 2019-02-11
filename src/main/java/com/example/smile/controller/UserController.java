@@ -3,6 +3,7 @@ package com.example.smile.controller;
 import com.example.smile.service.UserService;
 import com.example.smile.util.WebSecurityConfig;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/")
@@ -34,5 +36,10 @@ public class UserController {
         }
     }
 
+    @RequestMapping(value = "readingPlanHome",method = RequestMethod.POST)
+    public ModelAndView ReadingPlanHome(HttpServletRequest request){
 
+        ModelAndView modelAndView = new ModelAndView("crossHome");
+        return modelAndView;
+    }
 }

@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="../css/fontawesome-all.min.css">                                      <!-- Font awesome -->
     <link rel="stylesheet" href="../css/tooplate-style.css">
     <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" href="../css/calendar.css">
 
+    <script type="text/javascript" src="../js/language/zh-CN.js"></script>
+    <script type="text/javascript" src="../js/calendar.js"></script>
+    <script type="text/javascript" src="../js/underscore-min.js"></script>
     <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="../js/jquery.fullcalendar.js?v=0.7"></script>
@@ -32,16 +36,19 @@
       alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
       renderPage = false;
     }
-  </script>
+    /*var calendar = $("#calendar").calendar({language: 'zh-cn'});*/
 
-  <script type="text/javascript">
-      var mydiv=document.getElementById("calendar");
-      var mydiv_resize=function(){
-          mydiv.style.width=document.body.clientWidth;
-          mydiv.style.height=document.body.clientHeight;
-      }
-      mydiv_resize();
-      window.onresize=mydiv_resize;
+    var calendar = $("#calendar").calendar(
+        {
+            language: 'zh-cn',
+            tmpl_path: "../static/tmpls/",
+            events_source: function () { return []; }
+        });
+
+    function readingPlan() {
+        $("#ReadingPlan").submit();
+    }
+
   </script>
 
 </head>
@@ -103,13 +110,15 @@
 
       <div class="row tm-albums-container grid">
         <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
-          <figure class="effect-sadie">
-            <img src="../img/insertion-260x390-01.jpg" alt="Image" class="img-fluid">
-            <figcaption>
-              <h2>First Album</h2>
-              <p>Rollover text and description text goes here over mouse over...</p>
-            </figcaption>
-          </figure>
+          <form id="ReadingPlan" method="POST" action="/readingPlanHome">
+            <figure class="effect-sadie" onclick="readingPlan()">
+              <img src="../img/insertion-cross.jpg" alt="Image" class="img-fluid">
+                <figcaption >
+                <h2>Reading plan</h2>
+                <p>A fiery spiritual life begins with reading.</p>
+              </figcaption>
+            </figure>
+          </form>
         </div>
         <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
           <figure class="effect-sadie">
@@ -146,10 +155,12 @@
           </div>
         </div>
       </div>
+
       <div >
-        <div id="calendar" class="tm-buy-box" region="center" style="width:100%;height: 900px;overflow:auto;"> <!--style="width: 1180px;height: 900px;margin-left: 10px;"-->
+        <!--<div id="calendar" class="tm-buy-box" region="center" style="width:100%;height: 900px;overflow:auto;"> &lt;!&ndash;style="width: 1180px;height: 900px;margin-left: 10px;"&ndash;&gt;
           <div class="easyui-fullCalendar" fit="true"></div>
-        </div>
+        </div>-->
+        <div id="calendar"></div>
       </div>
 
       <!--<div class="row mb-5">-->
