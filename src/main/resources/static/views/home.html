@@ -49,6 +49,18 @@
         $("#ReadingPlan").submit();
     }
 
+    function singingPoetry() {
+        $("#SingingPoetry").submit();
+    }
+
+    function wonderfulMoment() {
+        $("#WonderfulMoment").submit();
+    }
+
+    function myBlog() {
+        $("#MyBlog").submit();
+    }
+
   </script>
 
 </head>
@@ -121,31 +133,37 @@
           </form>
         </div>
         <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
-          <figure class="effect-sadie">
-            <img src="../img/insertion-260x390-02.jpg" alt="Image" class="img-fluid">
-            <figcaption>
-              <h2>Album Two</h2>
-              <p>Maecenas iaculis et turpis et iaculis. Aenean at volutpat diam.</p>
-            </figcaption>
-          </figure>
+          <form id="SingingPoetry" method="POST" action="/singingPoetry">
+            <figure class="effect-sadie" onclick="singingPoetry()">
+              <img src="../img/insertion-260x390-02.jpg" alt="Image" class="img-fluid">
+              <figcaption>
+                <h2>Singing poetry</h2>
+                <p>Let us go to God to worship us first.</p>
+              </figcaption>
+            </figure>
+          </form>
         </div>
         <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
-          <figure class="effect-sadie">
-            <img src="../img/insertion-260x390-03.jpg" alt="Image" class="img-fluid">
-            <figcaption>
-              <h2>Third Album</h2>
-              <p>Vivamus eget elit purus. Nullam consectetur porttitor elementum.</p>
-            </figcaption>
-          </figure>
+          <form id="WonderfulMoment" method="POST" action="/wonderfulMoment">
+            <figure class="effect-sadie" onclick="wonderfulMoment()">
+              <img src="../img/insertion-260x390-03.jpg" alt="Image" class="img-fluid">
+              <figcaption>
+                <h2>Wonderful moment</h2>
+                <p>Record the wonderful moments we have together.</p>
+              </figcaption>
+            </figure>
+          </form>
         </div>
         <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
-          <figure class="effect-sadie">
-            <img src="../img/insertion-260x390-04.jpg" alt="Image" class="img-fluid">
-            <figcaption>
-              <h2>Album Four</h2>
-              <p>Praesent nec feugiat dolor, elementum mollis purus. Etiam faucibus.</p>
-            </figcaption>
-          </figure>
+          <form id="MyBlog" method="POST" action="/myBlog">
+            <figure class="effect-sadie" onclick="myBlog()">
+              <img src="../img/insertion-260x390-04.jpg" alt="Image" class="img-fluid">
+              <figcaption>
+                <h2>My blog</h2>
+                <p>Here is the world that belongs only to me.</p>
+              </figcaption>
+            </figure>
+          </form>
         </div>
       </div>
       <div class="row">

@@ -42,4 +42,23 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView("crossHome");
         return modelAndView;
     }
+
+    @RequestMapping(value = "singingPoetry",method = RequestMethod.POST)
+    public ModelAndView SingingPoetryHome(HttpServletRequest request){
+
+        ModelAndView modelAndView = new ModelAndView("singHome");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "wonderfulMoment",method = RequestMethod.POST)
+    public ModelAndView WonderfulMomentHome(HttpServletRequest request){
+        ModelAndView modelAndView = new ModelAndView("wonderfulMomentHome");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "myBlog",method = RequestMethod.POST)
+    public ModelAndView MyBlogHome(HttpServletRequest request){
+        ModelAndView modelAndView = new ModelAndView("MyBlogHome");
+        return modelAndView;
+    }
 }
